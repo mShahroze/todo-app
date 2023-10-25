@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+.main {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--TodoApp-main-bgColor);
+  transition: 200ms;
+}
+
+.desktopBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 18.75rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: 37.5vw;
+  min-width: 540px;
+  z-index: 1;
+  min-height: 80vh;
+}
+
+.topDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.h1 {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.2), 0 2px 2px hsl(0deg 0% 0% / 0.2),
+    0 4px 4px hsl(0deg 0% 0% / 0.2), 0 8px 8px hsl(0deg 0% 0% / 0.2),
+    0 16px 16px hsl(0deg 0% 0% / 0.2);
+}
+
+.modeButton {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.inputDiv {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--TodoApp-container-bgColor);
+  padding: 1.25rem 1.5rem;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  transition: 200ms;
+}
+
+.form {
+  flex-grow: 1;
+}
+
+.inputCheck {
+  border-radius: 50%;
+  background: none;
+  border: 1px solid var(--TodoApp-borderColor);
+  width: 25px;
+  height: 25px;
+  transition: 200ms;
+}
+
+.input {
+  font-family: inherit;
+  border: none;
+  background: none;
+  height: 100%;
+  font-size: 18px;
+  color: var(--TodoApp-mainText-color);
+  outline: none;
+  caret-color: hsl(220, 98%, 61%);
+  width: 100%;
+  transition: 200ms;
+}
+
+.input::placeholder {
+  color: var(--TodoApp-placeholder-color);
+  transition: 200ms;
+}
+
+.ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  background-color: var(--TodoApp-container-bgColor);
+  border-radius: 5px;
+  box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+  height: 55.25vh;
+  min-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  list-style: none;
+  transition: 200ms;
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid var(--TodoApp-borderColor);
+  transition: 200ms;
+}
+
+.bottomItem {
+  color: var(--TodoApp-bottomItem-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding: 1.5rem;
+  transition: 200ms;
+}
+
+.filterDiv {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.actionButton {
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.actionButton:active {
+  color: var(--TodoApp-actionButton-activeColor);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.active {
+  color: hsl(220, 98%, 61%);
+}
+
+.bottomText {
+  color: var(--TodoApp-bottomItem-color);
+  font-weight: 400;
+  text-align: center;
+  margin-top: 2rem;
+  transition: 200ms;
+}
+
+@media (width <= 768px) {
+  .h1 {
+    font-size: 24px;
+    letter-spacing: 0.75rem;
+  }
+
+  .section {
+    min-width: 90vw;
+    /* min-height: 750px; */
+    overflow-y: auto;
+    padding-top: 2rem;
+  }
+
+  .inputCheck {
+    width: 22.5px;
+    height: 22.5px;
+  }
+
+  .input {
+    font-size: 14px;
+  }
+
+  .bottomItem {
+    font-size: 12px;
+  }
+
+  .filterDiv {
+    gap: 1.5rem;
+    position: absolute;
+    width: 90vw;
+    height: 60px;
+    background-color: var(--TodoApp-container-bgColor);
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075), 0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075), 0 16px 16px hsl(0deg 0% 0% / 0.075);
+    font-size: 14px;
+    left: 5vw;
+    top: 82.5vh;
+  }
+
+  .bottomText {
+    font-size: 14px;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+  }
+
+  @media (height > 810px) {
+    .filterDiv {
+      left: 5vw;
+      top: 82.5vh;
+    }
+
+    .bottomText {
+      margin-top: 7rem;
+    }
+  }
+
+  @media (701px <= height <= 809px) {
+    .filterDiv {
+      left: 5vw;
+      top: 84vh;
+    }
+
+    .bottomText {
+      margin-top: 5rem;
+    }
+  }
+
+  @media (601px <= height <= 700px) {
+    .filterDiv {
+      left: 5vw;
+      top: 87.5vh;
+    }
+
+    .bottomText {
+      margin-top: 6rem;
+    }
+  }
+
+  @media (545px <= height <= 600px) {
+    .filterDiv {
+      left: 5vw;
+      top: 90vh;
+    }
+
+    .bottomText {
+      margin-top: 5rem;
+    }
+  }
+
+  @media (height <= 545px) {
+    .filterDiv {
+      left: 5vw;
+      top: 95vh;
+    }
+
+    .bottomText {
+      margin-top: 5rem;
+    }
+  }
+}

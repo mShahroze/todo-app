@@ -1,0 +1,132 @@
+.ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.a {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+}
+
+.a:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 700;
+}
+
+.a:active {
+    color: hsl(0, 0%, 60%);
+}
+
+.buttonDiv {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.buttonBorder {
+    border: 1.5px solid hsl(0, 0%, 41%);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+}
+
+.button:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 700;
+    border-color: hsl(0, 0%, 8%);
+}
+
+.button:active {
+    color: hsl(0, 0%, 60%);
+    border-color: hsl(0, 0%, 60%);
+}
+
+.divSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5rem 1rem;
+}
+
+.ulSide {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 14px;
+}
+
+.buttonDivSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    width: 100%;
+}
+
+.buttonSide {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: inherit;
+    color: hsl(0, 0%, 41%);
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0.5rem 4.5rem;
+}
+
+.buttonSide:hover {
+    color: hsl(0, 0%, 8%);
+    font-weight: 700;
+    border-color: hsl(0, 0%, 8%);
+}
+
+.buttonSide:active {
+    color: hsl(0, 0%, 60%);
+    border-color: hsl(0, 0%, 60%);
+}
+
+.buttonBorderSide {
+    border: 1.5px solid hsl(0, 0%, 41%);
+    padding: 0.5rem 4rem;
+    border-radius: 15px;
+}
+
+@media (769px <= width <= 1024px) {
+    .ul {
+        gap: 1.5rem;
+    }
+
+    .buttonDiv {
+        gap: 1rem;
+    }
+}
+
+@media (width <= 768px) {
+    .ul {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .buttonDiv {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
