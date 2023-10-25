@@ -120,8 +120,8 @@ const App = () => {
       <Image
         src={
           darkMode
-            ? "/todo-app/bg-desktop-dark.jpg"
-            : "/todo-app/bg-desktop-light.jpg"
+            ? "/todo-app/assets/images/bg-desktop-dark.jpg"
+            : "/todo-app/assets/images/bg-desktop-light.jpg"
         }
         alt="background"
         width={1440}
@@ -135,7 +135,9 @@ const App = () => {
           <button onClick={handleModeClick} className={styles.modeButton}>
             <Image
               src={
-                darkMode ? "/todo-app/icon-sun.svg" : "/todo-app/icon-moon.svg"
+                darkMode
+                  ? "/todo-app/assets/images/icon-sun.svg"
+                  : "/todo-app/assets/images/icon-moon.svg"
               }
               alt="mode"
               width={26}

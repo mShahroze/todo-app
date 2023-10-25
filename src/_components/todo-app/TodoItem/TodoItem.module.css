@@ -1,99 +1,104 @@
 .div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.25rem 1.5rem;
-    cursor: grab;
-    max-height: 65px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  cursor: grab;
+  max-height: 65px;
 }
 
 .check {
-    min-width: 25px;
-    min-height: 25px;
-    border-radius: 50%;
-    background: none;
-    border: 1px solid var(--TodoApp-borderColor);
-    cursor: pointer;
-    transition: 200ms;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  background: none;
+  border: 1px solid var(--TodoApp-borderColor);
+  cursor: pointer;
+  transition: 200ms;
 }
 
 .checked {
-    min-width: 25px;
-    min-height: 25px;
-    border-radius: 50%;
-    border-radius: 50%;
-    background: none;
-    border: double 1px transparent;
-    cursor: pointer;
-    background-image: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-    background-clip: content-box, border-box;
+  min-width: 25px;
+  min-height: 25px;
+  border-radius: 50%;
+  border-radius: 50%;
+  background: none;
+  border: double 1px transparent;
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+  background-clip: content-box, border-box;
 }
 
 .div:hover .check {
-    border: double 1px transparent;
-    border-radius: 50%;
-    background-image:
-        linear-gradient(var(--TodoApp-container-bgColor), var(--TodoApp-container-bgColor)),
-        linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
-    ;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+  border: double 1px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(
+      var(--TodoApp-container-bgColor),
+      var(--TodoApp-container-bgColor)
+    ),
+    linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
 .p {
-    font-size: 18px;
-    color: var(--TodoApp-mainText-color);
-    flex-grow: 1;
-    overflow-x: auto;
-    transition: 200ms;
+  font-size: 18px;
+  color: var(--TodoApp-mainText-color);
+  flex-grow: 1;
+  overflow-x: auto;
+  transition: 200ms;
 }
 
 .p::-webkit-scrollbar {
-    height: 0.5rem;
+  height: 0.5rem;
 }
 
 .p::-webkit-scrollbar-track {
-    background: #f1f1f1;
+  background: #f1f1f1;
 }
 
 .p::-webkit-scrollbar-thumb {
-    background: #888;
+  background: #888;
 }
 
 .p::-webkit-scrollbar-thumb:hover {
-    background: #555;
+  background: #555;
 }
 
 .checkedP {
-    color: var(--TodoApp-checkedP-color);
-    text-decoration: line-through;
-    transition: 200ms;
+  color: var(--TodoApp-checkedP-color);
+  text-decoration: line-through;
+  transition: 200ms;
 }
 
 .remove {
-    border: none;
-    background: none;
-    cursor: pointer;
-    opacity: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 0;
 }
 
 .div:hover .remove {
-    opacity: 1;
+  opacity: 1;
 }
 
 @media (width <= 768px) {
-    .check {
-        min-width: 22.5px;
-        min-height: 22.5px;
-    }
+  .check {
+    min-width: 22.5px;
+    min-height: 22.5px;
+  }
 
-    .checked {
-        min-width: 22.5px;
-        min-height: 22.5px;
-    }
+  .checked {
+    min-width: 22.5px;
+    min-height: 22.5px;
+  }
 
-    .p {
-        font-size: 14px;
-    }
+  .p {
+    font-size: 14px;
+  }
 }
